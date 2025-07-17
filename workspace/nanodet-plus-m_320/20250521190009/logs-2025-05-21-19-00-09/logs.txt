@@ -1,0 +1,22 @@
+[NanoDet][05-21 19:00:09]INFO: Setting up data...
+[NanoDet][05-21 19:00:09]INFO: Creating model...
+[NanoDet][05-21 19:00:10]INFO: Starting testing...
+[NanoDet][05-21 19:00:11]INFO: Loaded average state from checkpoint.
+[NanoDet][05-21 19:00:57]INFO: 
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.815
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.974
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.916
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.331
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.472
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.845
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.745
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.854
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.855
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.544
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.660
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.880
+
+[NanoDet][05-21 19:00:57]INFO: 
+| class   | AP50   | mAP   |
+|:--------|:-------|:------|
+| crack   | 97.4   | 81.5  |
