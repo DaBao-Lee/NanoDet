@@ -4,7 +4,7 @@ matplotlib
 numpy
 omegaconf>=2.0.1
 onnx
-onnx-simplifier
+# onnx-simplifier
 opencv-python
 pyaml
 pycocotools
