@@ -3,7 +3,9 @@ import onnxruntime as ort
 import cv2, math, argparse
 
 class my_nanodet():
+
     def __init__(self, model_pb_path, prob_threshold=0.4, iou_threshold=0.3):
+
         self.classes = ['EPI-Individual-Equipment-Protection', 'capacete', 'colete_refletivo', 'sem_capacete', 'sem_colete_refletivo']
         self.num_classes = len(self.classes)
         self.prob_threshold = prob_threshold
@@ -36,12 +38,14 @@ class my_nanodet():
         return np.stack((xv, yv), axis=-1)
 
     def softmax(self, x, axis=1):
+
         x_exp = np.exp(x)
         x_sum = np.sum(x_exp, axis=axis, keepdims=True)
         s = x_exp / x_sum
         return s
 
     def _normalize(self, img):
+
         img = img.astype(np.float32)
         img = (img - self.mean) / (self.std)
         return img
@@ -67,6 +71,7 @@ class my_nanodet():
         return img, newh, neww, top, left
 
     def post_process(self, preds, scale_factor=1, rescale=False):
+
         mlvl_bboxes = []
         mlvl_scores = []
         ind = 0
@@ -111,6 +116,7 @@ class my_nanodet():
             return np.array([]), np.array([]), np.array([])
 
     def distance2bbox(self, points, distance, max_shape=None):
+        
         x1 = points[:, 0] - distance[:, 0]
         y1 = points[:, 1] - distance[:, 1]
         x2 = points[:, 0] + distance[:, 2]
